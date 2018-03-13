@@ -1,13 +1,11 @@
 package com.sgnatiuk
 
 fun main(args: Array<String>) {
-    val shapes = listOf<Any>(
+    listOf(
             Square(2),
             Rectangle(1, 2)
-    )
-
-    for (shape in shapes) {
-        println(shape)
+    ).forEach {
+        println("$it perimeter=${it.perimeter()}")
     }
 }
 
@@ -15,17 +13,15 @@ interface Shape{
     fun perimeter(): Int
 }
 
-class Square(val a: Int) {
+open class Square(val a: Int) : Shape {
 
-    override fun toString(): String {
-        return "Square(a=$a)"
-    }
+    override fun perimeter() = 4 * a
+    override fun toString() = "Square(a=$a)"
 }
 
-class Rectangle(val a: Int, val b : Int) {
+class Rectangle(a: Int, val b : Int) : Square(a) {
 
-    override fun toString(): String {
-        return "Rectangle(a=$a, b=$b)"
-    }
+    override fun perimeter() = 2 * (a + b)
+    override fun toString() = "Rectangle(a=$a, b=$b)"
 }
 
