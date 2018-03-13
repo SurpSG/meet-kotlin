@@ -3,4 +3,5 @@ out/
 build/
 *.class
 *.jar
-
+.grade
+output.txt
