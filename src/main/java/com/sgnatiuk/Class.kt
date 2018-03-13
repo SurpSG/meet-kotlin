@@ -15,7 +15,7 @@ interface Shape{
     fun perimeter(): Int
 }
 
-open class Square(val a: Int) {
+class Square(val a: Int) {
 
     override fun toString(): String {
         return "Square(a=$a)"
