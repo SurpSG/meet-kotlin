@@ -22,6 +22,6 @@ fun main(args: Array<String>) {
 
 
 
-//void function
+//void function with default args
 //function return value
 //single/last lambda arg. inline
