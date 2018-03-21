@@ -24,4 +24,4 @@ fun main(args: Array<String>) {
 
 //void function
 //function return value
-//single/last lambda arg
+//single/last lambda arg. inline
