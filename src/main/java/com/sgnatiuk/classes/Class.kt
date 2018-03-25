@@ -1,4 +1,4 @@
-package com.sgnatiuk
+package com.sgnatiuk.classes
 
 fun main(args: Array<String>) {
     listOf(

@@ -1,4 +1,4 @@
-package com.sgnatiuk
+package com.sgnatiuk.delegates
 
 import java.nio.file.Files
 import java.nio.file.Path
@@ -10,7 +10,7 @@ interface WorkListener{
     fun onFailure(e: Exception)
 }
 
-class ConsolePrintListener() : WorkListener{
+class ConsolePrintListener : WorkListener {
 
     override fun onSuccess(result: String) = println(result)
     override fun onFailure(e: Exception) = System.err.println(e.message)
