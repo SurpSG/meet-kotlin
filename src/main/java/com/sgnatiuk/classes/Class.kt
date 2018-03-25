@@ -1,4 +1,4 @@
-package com.sgnatiuk
+package com.sgnatiuk.classes
 
 fun main(args: Array<String>) {
     val shapes = listOf<Any>(
@@ -17,15 +17,11 @@ interface Shape{
 
 class Square(val a: Int) {
 
-    override fun toString(): String {
-        return "Square(a=$a)"
-    }
+    override fun toString() = "Square(a=$a)"
 }
 
 class Rectangle(val a: Int, val b : Int) {
 
-    override fun toString(): String {
-        return "Rectangle(a=$a, b=$b)"
-    }
+    override fun toString() = "Rectangle(a=$a, b=$b)"
 }
 

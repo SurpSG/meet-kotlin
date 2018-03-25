@@ -1,4 +1,4 @@
-package com.sgnatiuk
+package com.sgnatiuk.delegates
 
 import java.nio.file.Files
 import java.nio.file.Path
@@ -10,7 +10,7 @@ interface WorkListener{
     fun onFailure(e : Exception)
 }
 
-class ConsolePrintListener() : WorkListener{
+class ConsolePrintListener : WorkListener {
 
     override fun onSuccess(result: String) {
         println(result)
@@ -24,7 +24,7 @@ class ConsolePrintListener() : WorkListener{
 class StoreToFileListener(
         private val workListener: WorkListener,
         filePath : String
-) : WorkListener {
+) : WorkListener {// add: 'by workListener' and remove 'onFailure' function
 
     private val path : Path by lazy {
         Paths.get(filePath)

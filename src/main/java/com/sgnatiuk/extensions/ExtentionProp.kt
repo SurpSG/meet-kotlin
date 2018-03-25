@@ -1,4 +1,4 @@
-package com.sgnatiuk
+package com.sgnatiuk.extensions
 
 import java.math.BigInteger
 
